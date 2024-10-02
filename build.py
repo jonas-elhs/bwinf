@@ -18,7 +18,7 @@ def prepare():
     os.remove(ZIP_ROOT)
 
 def compile():
-  for name in [ dir.name for dir in os.scandir('.') if dir.is_dir() and not (dir.name.startswith(['.', '-'])) ]:
+  for name in [ dir.name for dir in os.scandir('.') if dir.is_dir() and not (dir.name.startswith(('.', '-'))) ]:
     folder = os.path.join(ROOT, name)
     py = name.lower() + '.py'
     docx = name + '.docx'
